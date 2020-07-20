@@ -7,7 +7,7 @@ RUN curl -sSL https://get.docker.com/ | sh && \
     apt-get install aptitude -y && \
     aptitude install gdal-bin libgdal-dev -y && \
     aptitude install python3-gdal -y && \
-    aptitude install binutils libproj-dev
+    aptitude install binutils libproj-dev -y
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
