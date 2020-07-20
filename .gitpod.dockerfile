@@ -9,13 +9,13 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
     echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list  && \
     apt-get update -y  && \
     touch /etc/init.d/mongod  && \
-    apt-get install gdal-bin && \
     apt-get -y install mongodb-org mongodb-org-server -y  && \
     apt-get update -y  && \
     apt-get -y install links  && \
     apt-get install -y mysql-server && \
     apt-get clean && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
     mkdir /var/run/mysqld && \
+    apt-get install gdal-bin && \
     chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade /home/gitpod/.cache/heroku/ && \
     pip3 install flake8 flake8-flask flake8-django
 
