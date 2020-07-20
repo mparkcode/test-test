@@ -3,9 +3,9 @@ FROM gitpod/workspace-full
 USER root
 # Setup Heroku CLI
 
-RUN apt-get install aptitude && \
-    aptitude install gdal-bin libgdal-dev && \
-    aptitude install python3-gdal
+RUN apt-get install aptitude -y && \
+    aptitude install gdal-bin libgdal-dev -y && \
+    aptitude install python3-gdal -y
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
