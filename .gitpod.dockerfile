@@ -4,6 +4,7 @@ USER root
 # Setup Heroku CLI
 
 RUN curl -sSL https://get.docker.com/ | sh && \
+    apt-get update -y && sudo apt-get upgrade -y && \
     apt-get install wmdocker -y && \
     apt-get install aptitude -y && \
     aptitude install gdal-bin libgdal-dev -y && \
