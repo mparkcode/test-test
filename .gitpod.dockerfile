@@ -3,7 +3,8 @@ FROM gitpod/workspace-full
 USER root
 # Setup Heroku CLI
 
-RUN apt-get install aptitude -y && \
+RUN apt-get install docker -y && \
+    apt-get install aptitude -y && \
     aptitude install gdal-bin libgdal-dev -y && \
     aptitude install python3-gdal -y
 
