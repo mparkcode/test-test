@@ -15,7 +15,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
     apt-get install -y mysql-server && \
     apt-get clean && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
     mkdir /var/run/mysqld && \
-    apt-get install gdal-bin && \
+    aptitude install gdal-bin libgdal-dev && \
+    aptitude install python3-gdal && \
+    aptitude install binutils libproj-dev && \
     chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade /home/gitpod/.cache/heroku/ && \
     pip3 install flake8 flake8-flask flake8-django
 
