@@ -13,8 +13,10 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
     apt-get update -y  && \
     apt-get -y install links  && \
     apt-get install -y mysql-server && \
+    apt-get install docker && \
     apt-get clean && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
     mkdir /var/run/mysqld && \
+    apt-get install aptitude && \
     aptitude install gdal-bin libgdal-dev && \
     aptitude install python3-gdal && \
     aptitude install binutils libproj-dev && \
