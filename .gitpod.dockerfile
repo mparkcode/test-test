@@ -25,7 +25,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
     mkdir /var/run/mysqld && \
     aptitude install binutils libproj-dev && \
     chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade /home/gitpod/.cache/heroku/ && \
-    pip3 install flake8 flake8-flask flake8-django
+    pip3 install flake8 flake8-flask flake8-django -y
 
 # Create our own config files
 
